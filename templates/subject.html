@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .card-text {
+  flex-grow:1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+{% for row in default_rows %}        
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ row.Questions }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">#{{ row.ID }}</h6>
+    <p class="card-text">{{ row.Reponses }}</p>
+    <a href="/article/{{row.ID}}" class="card-link">Voir plus</a>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

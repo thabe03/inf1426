@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+
+    <!--first-section-->
+    <div class="first-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 ">
+                    <h1 style="font-family:Oswald,sans-serif;font-size:44px;">{{ subject }}</h1>
+                    <h3><span style="font-weight: 400;">{{ question }}</span></h3>
+                    <p><span style="font-weight: 400; font-family: Arial;"><pre style="white-space:pre-wrap;">{{ reponse }}</pre></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  @media (max-width: 767px) {
+    form{
+      padding:2rem;
+    }
+    #container{
+      padding-top:4rem;
+      padding-bottom:4rem;
+    }
+  }
+  @media (min-width: 768px) {
+    input, button {
+      width:75vh !important;
+    }
+    #container{
+      height:75vh;
+    }
+  }
+  main{
+    color:var(--text2) !important;
+  }
+</style>
+<div class="d-flex flex-column justify-content-center align-items-center w-100" id="container">
+<h1 class="h1 text-center">S'inscire à l'infolettre</h1>
+<form class="was-validated" action="/subscribe" method="post">
+  <div class="mt-2">
+    <label for="password" class="form-label">Courriel</label>
+    <input type="email" class="form-control is-valid" name="email" id="email" required>
+    <div class="invalid-feedback">
+      Entrez une adresse de courriel valide
+    </div>
+  </div>
+  <div class="mt-2">
+    <button class="btn btn-primary" type="submit">S'inscrire</button>
+  </div>
+</form>
+</div>
+
+{% endblock %}
